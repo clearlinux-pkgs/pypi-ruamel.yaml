@@ -4,7 +4,7 @@
 #
 Name     : pypi-ruamel.yaml
 Version  : 0.17.20
-Release  : 59
+Release  : 60
 URL      : https://files.pythonhosted.org/packages/2d/b1/b672cbe8be9ea09d85d2be8c3693811362295aa8483849e85b41caaadb85/ruamel.yaml-0.17.20.tar.gz
 Source0  : https://files.pythonhosted.org/packages/2d/b1/b672cbe8be9ea09d85d2be8c3693811362295aa8483849e85b41caaadb85/ruamel.yaml-0.17.20.tar.gz
 Summary  : ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order
@@ -13,11 +13,8 @@ License  : MIT
 Requires: pypi-ruamel.yaml-license = %{version}-%{release}
 Requires: pypi-ruamel.yaml-python = %{version}-%{release}
 Requires: pypi-ruamel.yaml-python3 = %{version}-%{release}
-Requires: ruamel.yaml.clib
+Requires: pypi(ruamel.yaml.clib)
 BuildRequires : buildreq-distutils3
-Provides: ruamel.yaml
-Provides: ruamel.yaml-python
-Provides: ruamel.yaml-python3
 
 %description
 ruamel.yaml
@@ -61,7 +58,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641492161
+export SOURCE_DATE_EPOCH=1641834995
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
