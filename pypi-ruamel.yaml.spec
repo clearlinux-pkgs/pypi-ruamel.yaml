@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-ruamel.yaml
-Version  : 0.17.26
-Release  : 72
-URL      : https://files.pythonhosted.org/packages/8c/0d/32f86bfad2755763b926f988252f57f4edbba32f876cb5e6d6f5c57b5f05/ruamel.yaml-0.17.26.tar.gz
-Source0  : https://files.pythonhosted.org/packages/8c/0d/32f86bfad2755763b926f988252f57f4edbba32f876cb5e6d6f5c57b5f05/ruamel.yaml-0.17.26.tar.gz
+Version  : 0.17.28
+Release  : 73
+URL      : https://files.pythonhosted.org/packages/8c/4e/faa94211c1cc468cfa38990955181c52be9a249008f37751d8406ff4d9d9/ruamel.yaml-0.17.28.tar.gz
+Source0  : https://files.pythonhosted.org/packages/8c/4e/faa94211c1cc468cfa38990955181c52be9a249008f37751d8406ff4d9d9/ruamel.yaml-0.17.28.tar.gz
 Summary  : ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order
 Group    : Development/Tools
 License  : MIT
@@ -56,10 +56,10 @@ python3 components for the pypi-ruamel.yaml package.
 
 
 %prep
-%setup -q -n ruamel.yaml-0.17.26
-cd %{_builddir}/ruamel.yaml-0.17.26
+%setup -q -n ruamel.yaml-0.17.28
+cd %{_builddir}/ruamel.yaml-0.17.28
 pushd ..
-cp -a ruamel.yaml-0.17.26 buildavx2
+cp -a ruamel.yaml-0.17.28 buildavx2
 popd
 
 %build
@@ -67,7 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683730219
+export SOURCE_DATE_EPOCH=1685120611
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
