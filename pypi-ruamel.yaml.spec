@@ -6,10 +6,10 @@
 # autospec commit: f032afc
 #
 Name     : pypi-ruamel.yaml
-Version  : 0.17.35
-Release  : 80
-URL      : https://files.pythonhosted.org/packages/de/7d/4f70a93fb0bdc3fb2e1cbd859702d70021ab6962b7d07bd854ac3313cb54/ruamel.yaml-0.17.35.tar.gz
-Source0  : https://files.pythonhosted.org/packages/de/7d/4f70a93fb0bdc3fb2e1cbd859702d70021ab6962b7d07bd854ac3313cb54/ruamel.yaml-0.17.35.tar.gz
+Version  : 0.17.38
+Release  : 81
+URL      : https://files.pythonhosted.org/packages/cc/7f/227b5acc72eea42fa44186d46a0f4e10850a03a05e8167d4dd57589101d9/ruamel.yaml-0.17.38.tar.gz
+Source0  : https://files.pythonhosted.org/packages/cc/7f/227b5acc72eea42fa44186d46a0f4e10850a03a05e8167d4dd57589101d9/ruamel.yaml-0.17.38.tar.gz
 Summary  : ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order
 Group    : Development/Tools
 License  : MIT
@@ -25,9 +25,25 @@ BuildRequires : pypi(wheel)
 %define debug_package %{nil}
 
 %description
-ruamel.yaml
-===========
-``ruamel.yaml`` is a YAML 1.2 loader/dumper package for Python.
+# ruamel.yaml
+`ruamel.yaml` is a YAML 1.2 loader/dumper package for Python.
+<table class="docutils">
+<tr>    <td>version</td>
+<td>0.17.35</td>
+</tr>
+<tr>    <td>updated</td>
+<td>2023-10-04</td>
+</tr>
+<tr>    <td>documentation</td>
+<td><a href="http://yaml.readthedocs.io">http://yaml.readthedocs.io</a></td>
+</tr>
+<tr>    <td>repository</td>
+<td><a href="https://sourceforge.net/projects/ruamel-yaml">https://sourceforge.net/projects/ruamel-yaml</a></td>
+</tr>
+<tr>    <td>pypi</td>
+<td><a href="https://pypi.org/project/ruamel.yaml">https://pypi.org/project/ruamel.yaml</a></td>
+</tr>
+</table>
 
 %package license
 Summary: license components for the pypi-ruamel.yaml package.
@@ -58,10 +74,10 @@ python3 components for the pypi-ruamel.yaml package.
 
 
 %prep
-%setup -q -n ruamel.yaml-0.17.35
-cd %{_builddir}/ruamel.yaml-0.17.35
+%setup -q -n ruamel.yaml-0.17.38
+cd %{_builddir}/ruamel.yaml-0.17.38
 pushd ..
-cp -a ruamel.yaml-0.17.35 buildavx2
+cp -a ruamel.yaml-0.17.38 buildavx2
 popd
 
 %build
@@ -69,7 +85,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1697723915
+export SOURCE_DATE_EPOCH=1697728293
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
