@@ -6,14 +6,13 @@
 # autospec commit: 5424026
 #
 Name     : pypi-ruamel.yaml
-Version  : 0.18.7
-Release  : 91
-URL      : https://files.pythonhosted.org/packages/be/f6/ae958c14677098f4fcc0a6b04b382c02f31ec628d2b03910e24f29d9bc58/ruamel.yaml-0.18.7.tar.gz
-Source0  : https://files.pythonhosted.org/packages/be/f6/ae958c14677098f4fcc0a6b04b382c02f31ec628d2b03910e24f29d9bc58/ruamel.yaml-0.18.7.tar.gz
+Version  : 0.18.8
+Release  : 92
+URL      : https://files.pythonhosted.org/packages/4a/9f/a073b2c0d916045c3decf885b6fea12d2d1b02f235e89a02606140111138/ruamel.yaml-0.18.8.tar.gz
+Source0  : https://files.pythonhosted.org/packages/4a/9f/a073b2c0d916045c3decf885b6fea12d2d1b02f235e89a02606140111138/ruamel.yaml-0.18.8.tar.gz
 Summary  : ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order
 Group    : Development/Tools
 License  : MIT
-Requires: pypi-ruamel.yaml-license = %{version}-%{release}
 Requires: pypi-ruamel.yaml-python = %{version}-%{release}
 Requires: pypi-ruamel.yaml-python3 = %{version}-%{release}
 Requires: pypi(ruamel.yaml.clib)
@@ -29,19 +28,11 @@ BuildRequires : pypi(wheel)
 `ruamel.yaml` is a YAML 1.2 loader/dumper package for Python.
 | | |
 | - | - |
-| version |0.18.7 |
-| updated |2024-12-30 |
+| version |0.18.8 |
+| updated |2025-01-02 |
 | documentation |https://yaml.dev/doc/ruamel.yaml |
 | repository |https://sourceforge.net/projects/ruamel-yaml |
 | pypi |https://pypi.org/project/ruamel.yaml |
-
-%package license
-Summary: license components for the pypi-ruamel.yaml package.
-Group: Default
-
-%description license
-license components for the pypi-ruamel.yaml package.
-
 
 %package python
 Summary: python components for the pypi-ruamel.yaml package.
@@ -64,10 +55,10 @@ python3 components for the pypi-ruamel.yaml package.
 
 
 %prep
-%setup -q -n ruamel.yaml-0.18.7
-cd %{_builddir}/ruamel.yaml-0.18.7
+%setup -q -n ruamel.yaml-0.18.8
+cd %{_builddir}/ruamel.yaml-0.18.8
 pushd ..
-cp -a ruamel.yaml-0.18.7 buildavx2
+cp -a ruamel.yaml-0.18.8 buildavx2
 popd
 
 %build
@@ -75,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1735592763
+export SOURCE_DATE_EPOCH=1735829974
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -120,8 +111,6 @@ ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/package-licenses/pypi-ruamel.yaml
-cp %{_builddir}/ruamel.yaml-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-ruamel.yaml/e7c975851acb9f2f446a6ed7a0b217274d16aaf6 || :
 python3 -m installer --destdir=%{buildroot} dist/*.whl
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -138,10 +127,6 @@ popd
 
 %files
 %defattr(-,root,root,-)
-
-%files license
-%defattr(0644,root,root,0755)
-/usr/share/package-licenses/pypi-ruamel.yaml/e7c975851acb9f2f446a6ed7a0b217274d16aaf6
 
 %files python
 %defattr(-,root,root,-)
