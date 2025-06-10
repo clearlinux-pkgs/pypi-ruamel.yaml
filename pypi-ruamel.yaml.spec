@@ -6,10 +6,10 @@
 # autospec commit: 65cf152
 #
 Name     : pypi-ruamel.yaml
-Version  : 0.18.12
-Release  : 96
-URL      : https://files.pythonhosted.org/packages/56/2f/5a4dd48a259cb72d6f972abb728d3b219b50980fe3b7c548e0be7c5f56aa/ruamel.yaml-0.18.12.tar.gz
-Source0  : https://files.pythonhosted.org/packages/56/2f/5a4dd48a259cb72d6f972abb728d3b219b50980fe3b7c548e0be7c5f56aa/ruamel.yaml-0.18.12.tar.gz
+Version  : 0.18.14
+Release  : 97
+URL      : https://files.pythonhosted.org/packages/39/87/6da0df742a4684263261c253f00edd5829e6aca970fff69e75028cccc547/ruamel.yaml-0.18.14.tar.gz
+Source0  : https://files.pythonhosted.org/packages/39/87/6da0df742a4684263261c253f00edd5829e6aca970fff69e75028cccc547/ruamel.yaml-0.18.14.tar.gz
 Summary  : ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order
 Group    : Development/Tools
 License  : MIT
@@ -28,8 +28,8 @@ BuildRequires : pypi(setuptools)
 `ruamel.yaml` is a YAML 1.2 loader/dumper package for Python.
 | | |
 | - | - |
-| version |0.18.12 |
-| updated |2025-05-30 |
+| version |0.18.13 |
+| updated |2025-06-06 |
 | documentation |https://yaml.dev/doc/ruamel.yaml |
 | repository |https://sourceforge.net/projects/ruamel-yaml |
 | pypi |https://pypi.org/project/ruamel.yaml |
@@ -63,10 +63,10 @@ python3 components for the pypi-ruamel.yaml package.
 
 
 %prep
-%setup -q -n ruamel.yaml-0.18.12
-cd %{_builddir}/ruamel.yaml-0.18.12
+%setup -q -n ruamel.yaml-0.18.14
+cd %{_builddir}/ruamel.yaml-0.18.14
 pushd ..
-cp -a ruamel.yaml-0.18.12 buildavx2
+cp -a ruamel.yaml-0.18.14 buildavx2
 popd
 
 %build
@@ -74,7 +74,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1748614619
+export SOURCE_DATE_EPOCH=1749572892
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
